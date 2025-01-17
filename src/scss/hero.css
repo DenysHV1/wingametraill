@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  background-image: url(../img/hero/hero-mobile.jpg);
+  background-image: url(../img/hero/hero-mobile-1x.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -8,6 +8,12 @@
   min-height: 246px;
   overflow: hidden;
   border-radius: 0px 0px 25px 25px;
+}
+
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: url(../img/hero/hero-mobile-2x.jpg);
+  }
 }
 
 .hero-inner {
@@ -106,9 +112,15 @@
 
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: url(../img/hero/hero-pc.jpg);
+    background-image: url(../img/hero/hero-pc-1x.jpg);
     min-height: 725px;
     border-radius: 0px 0px 50px 50px;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .hero {
+      background-image: url(../img/hero/hero-pc-2x.jpg);
+    }
   }
 
   .hero-inner {
