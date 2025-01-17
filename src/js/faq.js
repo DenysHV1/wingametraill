@@ -8,7 +8,7 @@ export const faq = () => {
       questionsBtn.forEach(btns => {
         [...btns.children].forEach(item => {
           if (item.nodeName === 'svg') {
-            item.style.transform = 'rotate(0deg)';
+            item.style.transform = 'rotate(180deg)';
           }
         });
       });
@@ -21,7 +21,7 @@ export const faq = () => {
         btn.nextElementSibling.classList.add('open');
         [...btn.children].forEach(item => {
           if (item.nodeName === 'svg') {
-            item.style.transform = 'rotate(180deg)';
+            item.style.transform = 'rotate(0deg)';
           }
         });
       }
