@@ -1,0 +1,94 @@
+.about-game {
+  padding-top: 50px;
+}
+
+.about-game-title-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 106%;
+  transform: translateX(-3%);
+  background-image: url(../img/wave.png), url(../img/wave.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left center, right center;
+  background-size: 65px 20px, 65px 20px;
+}
+
+.about-game_title {
+  max-width: 175px;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #02181d;
+  white-space: nowrap;
+}
+
+.about-game-content-div {
+  position: relative;
+}
+
+.about-game_text {
+  max-width: 225px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.07px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-top: 10px;
+}
+
+.about-game_picture {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: 87px;
+  height: 158px;
+}
+
+@media screen and (min-width: 1200px) {
+  .about-game {
+    padding-top: 59px;
+  }
+
+  .about-game-title-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 104.6%;
+    transform: translateX(-2.3%);
+    background-image: url(../img/wave-left-pc.png),
+      url(../img/wave-right-pc.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right center;
+    background-size: 391px 70px, 391px 70px;
+  }
+
+  .about-game_title {
+    max-width: 346px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .about-game_text {
+    max-width: 898px;
+    font-size: 24px;
+    line-height: 29.26px;
+
+    margin-top: 19px;
+  }
+
+  .about-game_picture {
+    position: absolute;
+    top: -20px;
+    right: -3px;
+    width: 145px;
+    height: 282px;
+  }
+}
