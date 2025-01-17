@@ -9,5 +9,9 @@
 <symbol id="icon-close-menu" viewBox="0 0 32 32">
 <path d="M8.534 24.411l-0.944-0.944 7.467-7.467-7.467-7.467 0.944-0.944 7.467 7.467 7.467-7.467 0.944 0.944-7.467 7.467 7.467 7.467-0.944 0.944-7.467-7.467-7.467 7.467z"></path>
 </symbol>
+<symbol id="icon-back-arrow" viewBox="0 0 31 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.4615" d="M26.923 16h-22.436"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.4615" d="M12.821 24.974l-8.974-8.974 8.974-8.974"></path>
+</symbol>
 </defs>
 </svg>
