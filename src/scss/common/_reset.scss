@@ -8,7 +8,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -39,6 +39,9 @@ a {
 
 button {
   cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
 }
 
 img {
