@@ -63,6 +63,7 @@
   stroke: black;
   min-width: 24px;
   height: 24px;
+  transform: rotate(180deg);
 }
 
 .faq-answer {
