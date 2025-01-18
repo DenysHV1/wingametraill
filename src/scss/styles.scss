@@ -10,13 +10,11 @@
 @import './storyline.css';
 @import './footer.css';
 
-@import './privacy-policy.css';
-@import './terms-conditions.css';
-
+@import './info-pages.css';
 
 :root {
-  background-color: #A3D5FF;
-  font-family: "Roboto Slab", serif;
+  background-color: #a3d5ff;
+  font-family: 'Roboto Slab', serif;
   color: #000000;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -32,13 +30,12 @@
   margin: 0 auto;
 }
 
-.features-container{
+.features-container {
   max-width: 360px;
   min-width: 320px;
   padding: 0 16px;
   margin: 0 auto;
 }
-
 
 @media screen and (min-width: 1200px) {
   .container {
@@ -46,7 +43,7 @@
     padding: 0 25px;
   }
 
-  .features-container{
+  .features-container {
     max-width: 1200px;
     padding: 0 52px;
   }
