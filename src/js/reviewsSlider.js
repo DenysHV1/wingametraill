@@ -2,9 +2,10 @@ export const reviewsSlider = () => {
   let index = 0;
   const sliderRew = document.querySelectorAll('.reviews-wrap-card');
   const dots = document.querySelectorAll('.dot');
-  let isSliderActive = false; // Стан активності слайдера
+  let isSliderActive = false;
+  let startX = 0;
+  let endX = 0;
 
-  // Функція для показу слайду
   function shoeSliderRew(n) {
     sliderRew.forEach((img, i) => {
       img.style.display = i === n ? 'block' : 'none';
@@ -15,19 +16,16 @@ export const reviewsSlider = () => {
     index = n;
   }
 
-  // Наступний слайд
   function nextSlide() {
     index = (index + 1) % sliderRew.length;
     shoeSliderRew(index);
   }
 
-  // Попередній слайд
   function prevSlide() {
     index = (index - 1 + sliderRew.length) % sliderRew.length;
     shoeSliderRew(index);
   }
 
-  // Активація слайдера
   function activateSlider() {
     if (!isSliderActive) {
       shoeSliderRew(index);
@@ -43,11 +41,16 @@ export const reviewsSlider = () => {
           shoeSliderRew(slideIndex);
         });
       });
+
+      sliderRew.forEach(slide => {
+        slide.addEventListener('touchstart', handleTouchStart);
+        slide.addEventListener('touchend', handleTouchEnd);
+      });
+
       isSliderActive = true;
     }
   }
 
-  // Деактивація слайдера
   function deactivateSlider() {
     if (isSliderActive) {
       sliderRew.forEach(img => {
@@ -57,16 +60,21 @@ export const reviewsSlider = () => {
         dot.classList.remove('active');
       });
       document
-        .getElementById('nextSlideButton')
+        .getElementById('nextSlideButtonRew')
         .removeEventListener('click', nextSlide);
       document
         .getElementById('prevSlideButtonRew')
         .removeEventListener('click', prevSlide);
+
+      sliderRew.forEach(slide => {
+        slide.removeEventListener('touchstart', handleTouchStart);
+        slide.removeEventListener('touchend', handleTouchEnd);
+      });
+
       isSliderActive = false;
     }
   }
 
-  // Перевірка ширини екрану
   function checkWindowSize() {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 320 && screenWidth <= 1199) {
@@ -76,9 +84,24 @@ export const reviewsSlider = () => {
     }
   }
 
-  // Слухач зміни розміру екрану
+  function handleTouchStart(event) {
+    startX = event.touches[0].clientX;
+  }
+
+  function handleTouchEnd(event) {
+    endX = event.changedTouches[0].clientX;
+    handleSwipe();
+  }
+
+  function handleSwipe() {
+    if (startX - endX > 50) {
+      nextSlide();
+    } else if (endX - startX > 50) {
+      prevSlide();
+    }
+  }
+
   window.addEventListener('resize', checkWindowSize);
 
-  // Початкова перевірка
   checkWindowSize();
 };

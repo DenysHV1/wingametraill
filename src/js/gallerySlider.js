@@ -2,11 +2,10 @@ export const gallerySlider = () => {
   let index = 0;
   const slides = document.querySelectorAll('.gallery-wrap-list img');
   const indicators = document.querySelectorAll('.indicator');
-  let isSliderActive = false; // Стан активності слайдера
-  let startX = 0; // Початкова точка свайпа
-  let endX = 0;   // Кінцева точка свайпа
+  let isSliderActive = false; 
+  let startX = 0;
+  let endX = 0;
 
-  // Функція для показу слайду
   function showSlide(n) {
     slides.forEach((img, i) => {
       img.style.display = i === n ? 'block' : 'none';
@@ -17,19 +16,16 @@ export const gallerySlider = () => {
     index = n;
   }
 
-  // Наступний слайд
   function nextSlide() {
     index = (index + 1) % slides.length;
     showSlide(index);
   }
 
-  // Попередній слайд
   function prevSlide() {
     index = (index - 1 + slides.length) % slides.length;
     showSlide(index);
   }
 
-  // Активація слайдера
   function activateSlider() {
     if (!isSliderActive) {
       showSlide(index);
@@ -46,7 +42,6 @@ export const gallerySlider = () => {
         });
       });
 
-      // Додавання підтримки свайпа
       slides.forEach(slide => {
         slide.addEventListener('touchstart', handleTouchStart);
         slide.addEventListener('touchend', handleTouchEnd);
@@ -56,7 +51,6 @@ export const gallerySlider = () => {
     }
   }
 
-  // Деактивація слайдера
   function deactivateSlider() {
     if (isSliderActive) {
       slides.forEach(img => {
@@ -81,7 +75,6 @@ export const gallerySlider = () => {
     }
   }
 
-  // Перевірка ширини екрану
   function checkWindowSize() {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 320 && screenWidth <= 1199) {
@@ -91,29 +84,25 @@ export const gallerySlider = () => {
     }
   }
 
-  // Обробка початку свайпа
   function handleTouchStart(event) {
     startX = event.touches[0].clientX;
   }
 
-  // Обробка завершення свайпа
   function handleTouchEnd(event) {
     endX = event.changedTouches[0].clientX;
     handleSwipe();
   }
 
-  // Визначення напрямку свайпа
   function handleSwipe() {
     if (startX - endX > 50) {
-      nextSlide(); // Свайп вліво
+      nextSlide();
     } else if (endX - startX > 50) {
-      prevSlide(); // Свайп вправо
+      prevSlide();
     }
   }
 
-  // Слухач зміни розміру екрану
+
   window.addEventListener('resize', checkWindowSize);
 
-  // Початкова перевірка
   checkWindowSize();
 };
