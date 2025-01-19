@@ -3,6 +3,8 @@ export const gallerySlider = () => {
   const slides = document.querySelectorAll('.gallery-wrap-list img');
   const indicators = document.querySelectorAll('.indicator');
   let isSliderActive = false; // Стан активності слайдера
+  let startX = 0; // Початкова точка свайпа
+  let endX = 0;   // Кінцева точка свайпа
 
   // Функція для показу слайду
   function showSlide(n) {
@@ -43,6 +45,13 @@ export const gallerySlider = () => {
           showSlide(slideIndex);
         });
       });
+
+      // Додавання підтримки свайпа
+      slides.forEach(slide => {
+        slide.addEventListener('touchstart', handleTouchStart);
+        slide.addEventListener('touchend', handleTouchEnd);
+      });
+
       isSliderActive = true;
     }
   }
@@ -62,6 +71,12 @@ export const gallerySlider = () => {
       document
         .getElementById('prevSlideButton')
         .removeEventListener('click', prevSlide);
+
+      slides.forEach(slide => {
+        slide.removeEventListener('touchstart', handleTouchStart);
+        slide.removeEventListener('touchend', handleTouchEnd);
+      });
+
       isSliderActive = false;
     }
   }
@@ -73,6 +88,26 @@ export const gallerySlider = () => {
       activateSlider();
     } else {
       deactivateSlider();
+    }
+  }
+
+  // Обробка початку свайпа
+  function handleTouchStart(event) {
+    startX = event.touches[0].clientX;
+  }
+
+  // Обробка завершення свайпа
+  function handleTouchEnd(event) {
+    endX = event.changedTouches[0].clientX;
+    handleSwipe();
+  }
+
+  // Визначення напрямку свайпа
+  function handleSwipe() {
+    if (startX - endX > 50) {
+      nextSlide(); // Свайп вліво
+    } else if (endX - startX > 50) {
+      prevSlide(); // Свайп вправо
     }
   }
 
