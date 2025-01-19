@@ -5,7 +5,7 @@ export const header = () => {
   const menuItems = document.querySelectorAll('.mobile-menu-item-js');
 
   openMenuBtn.addEventListener('click', () => {
-    menu.classList.add('is-open');
+    menu.classList.toggle('is-open');
   });
 
   closeMenuBtn.addEventListener('click', () => {
