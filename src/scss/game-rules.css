@@ -1,4 +1,5 @@
 .game-rules {
+  scroll-margin-top: 60px;
   padding-bottom: 70px;
 }
 .game-rules-container {
@@ -103,6 +104,7 @@
 
 @media screen and (min-width: 1200px) {
   .game-rules {
+    scroll-margin-top: 180px;
     padding-bottom: 100px;
   }
   .game-rules-container {
