@@ -1,6 +1,6 @@
 .storyline {
   padding-top: 64px;
-  scroll-margin-top: 10px;
+  scroll-margin-top: -5px;
 }
 
 .storyline-inner {
@@ -63,6 +63,7 @@
 @media screen and (min-width: 1200px) {
   .storyline {
     padding-top: 100px;
+    scroll-margin-top: 70px;
   }
 
   .storyline-inner {

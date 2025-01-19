@@ -1,6 +1,6 @@
 .features {
   padding-top: 70px;
-  scroll-margin-top: 55px;
+  scroll-margin-top: -5px;
 }
 
 .features-list {
@@ -61,6 +61,7 @@
 @media screen and (min-width: 1200px) {
   .features {
     padding-top: 100px;
+    scroll-margin-top: 60px;
   }
 
   .features-list {
