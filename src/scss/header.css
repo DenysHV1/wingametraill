@@ -20,6 +20,7 @@
 }
 
 .header-inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,20 +45,16 @@
 /**! mobile-menu-styles */
 .mobile-nav-js {
   position: absolute;
-  transform: translate(300%, 140px);
-  background-color: #a39ceff0;
-  padding: 32px 0;
-  width: 242px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 350ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  top: 52px;
+  right: -1900px;
+  transition: right 350ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .mobile-nav-js.is-open {
   position: absolute;
-  transform: translate(41%, 200px);
+  top: 52px;
+  right: -10px;
+  z-index: 999;
   background-color: #a39ceff0;
   padding: 32px 0;
   width: 242px;

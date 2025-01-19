@@ -15,6 +15,6 @@ export const header = () => {
   menuItems.forEach(item => {
     item.addEventListener('click', () => {
       menu.classList.remove('is-open');
-    }); 
+    });
   });
 };
