@@ -1,0 +1,190 @@
+.game-rules {
+  padding-bottom: 70px;
+}
+.game-rules-container {
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('/img/wave-left-pc.png'), url('/img/wave-right-pc.png');
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right top;
+  background-size: 91px 20px, 91px 20px;
+}
+
+.game-rules-title {
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding-bottom: 25px;
+}
+
+.card {
+  overflow: hidden;
+  width: 240px;
+  height: 316px;
+  border-radius: 25px;
+  background-color: #96b3eb;
+  text-align: center;
+
+  margin: 25px auto;
+  padding: 20px 21px 20px;
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-image img {
+  border-radius: 10px;
+  width: 200px;
+  height: 170px;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  color: #000;
+  padding: 5px 0;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.overlay-text {
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #000;
+
+  background: rgba(203, 192, 176, 0.78);
+
+  width: 152px;
+  margin-left: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+
+  margin-top: 15px;
+
+  color: #000;
+}
+
+.game-rules-characters {
+  position: relative;
+}
+.game-rules-man {
+  position: absolute;
+  top: -128px;
+  left: 0;
+  width: 99px;
+  height: 179px;
+}
+
+.game-rules-girl {
+  position: absolute;
+  top: -131px;
+  left: 228px;
+  width: 80px;
+  height: 181px;
+}
+
+@media screen and (min-width: 1200px) {
+  .game-rules {
+    padding-bottom: 100px;
+  }
+  .game-rules-container {
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('/img/wave-left-pc.png'),
+      url('/img/wave-right-pc.png');
+
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right top;
+    background-size: 391px 70px, 390px 70px;
+  }
+
+  .game-rules-title {
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    padding-bottom: 30px;
+  }
+
+  .card-wrap-first {
+    display: flex;
+    gap: 50px;
+    padding-bottom: 30px;
+    margin-left: 58px;
+  }
+
+  .card-wrap-second {
+    display: flex;
+    gap: 30px;
+    margin-left: 247px;
+  }
+
+  .card {
+    width: 328px;
+    height: 487px;
+
+    margin: 0;
+
+    padding: 32px 21px 18px;
+  }
+
+  .card-image img {
+    width: 287px;
+    height: 245px;
+  }
+
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    color: #000;
+    padding: 5px 0;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .overlay-text {
+    font-size: 24px;
+    width: 252px;
+    margin-left: 17px;
+    margin-bottom: 25px;
+  }
+
+  .card-content p {
+    font-size: 24px;
+  }
+
+  .game-rules-man {
+    top: -410px;
+    left: 5px;
+    width: 254px;
+    height: 505px;
+  }
+
+  .game-rules-girl {
+    top: -402px;
+    left: 914px;
+    width: 213px;
+    height: 484px;
+  }
+}
