@@ -1,0 +1,150 @@
+.reviews-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('/img/wave-left-pc.png'), url('/img/wave-right-pc.png');
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right top;
+  background-size: 102px 20px, 102px 20px;
+}
+
+.reviews-wrap-title {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  padding-bottom: 25px;
+  color: #000;
+}
+
+.reviews-wrap-card {
+  border: 1px solid #000;
+  background: rgba(150, 179, 235, 0.75);
+  border-radius: 25px;
+  width: 300px;
+  height: 136px;
+}
+
+.riviews-wrap-card-block {
+  display: flex;
+  padding-top: 15px;
+  padding-right: 38px;
+  padding-left: 20px;
+}
+
+.reviews-wrap-img {
+  border: 1px solid #685555;
+  border-radius: 180px;
+  width: 50px;
+  height: 50px;
+}
+.reviews-wrap-caption {
+  display: block;
+  padding-top: 8px;
+  padding-left: 38px;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+.reviews-wrap-text {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #000;
+  padding-left: 58px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.arrows button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow {
+  width: 25px;
+  height: 33px;
+  cursor: pointer;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #96b3eb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.dot.active {
+  background-color: #fff;
+}
+
+@media screen and (min-width: 1200px) {
+  .reviews-container {
+    background-image: url('/img/wave-left-pc.png'),
+      url('/img/wave-right-pc.png');
+    background-size: 390px 70px, 390px 70px;
+  }
+  .reviews-wrap {
+    width: 1197px;
+    height: 545px;
+  }
+
+  .reviews-wrap-title {
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    padding-bottom: 30px;
+  }
+
+  .reviews-wrap-card {
+    width: 454px;
+    height: 213px;
+  }
+
+  .reviews-wrap-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 30px;
+    padding-left: 82px;
+  }
+
+  .riviews-wrap-card-block {
+    display: flex;
+    padding-top: 30px;
+    padding-right: 38px;
+    padding-left: 30px;
+  }
+
+  .reviews-wrap-img {
+    width: 80px;
+    height: 80px;
+  }
+  .reviews-wrap-caption {
+    padding-top: 2px;
+    padding-left: 48px;
+    font-size: 24px;
+  }
+  .reviews-wrap-text {
+    font-weight: 300;
+    font-size: 24px;
+    padding-left: 133px;
+    margin-top: -31px;
+  }
+
+  .controls {
+    display: none;
+  }
+}
