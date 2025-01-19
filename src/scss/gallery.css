@@ -46,6 +46,13 @@
   height: 33px;
   cursor: pointer;
 }
+
+.arrow1{
+  width: 25px;
+  height: 33px;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
 .indicators {
   display: flex;
   justify-content: center;

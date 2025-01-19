@@ -52,7 +52,7 @@
 
 .mobile-nav-js.is-open {
   position: absolute;
-  top: 52px;
+  top: 51px;
   right: -10px;
   z-index: 999;
   background-color: #a39ceff0;

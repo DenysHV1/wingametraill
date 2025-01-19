@@ -71,11 +71,7 @@
   align-items: center;
   justify-content: center;
 }
-.arrow {
-  width: 25px;
-  height: 33px;
-  cursor: pointer;
-}
+
 .dots {
   display: flex;
   justify-content: center;
