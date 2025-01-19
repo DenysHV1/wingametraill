@@ -1,10 +1,12 @@
+.reviews{
+  scroll-margin-top: 150px;
+}
+
 .reviews-container {
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-image: url('/img/wave-left-pc.png'), url('/img/wave-right-pc.png');
-
   background-repeat: no-repeat, no-repeat;
   background-position: left top, right top;
   background-size: 102px 20px, 102px 20px;
