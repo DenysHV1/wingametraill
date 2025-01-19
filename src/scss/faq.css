@@ -1,5 +1,5 @@
 .faq {
-  scroll-margin-top: 30px;
+  scroll-margin-top: -10px;
   padding-top: 70px;
 }
 
@@ -91,6 +91,7 @@
 
 @media screen and (min-width: 1200px) {
   .faq {
+    scroll-margin-top: 85px;
     padding-top: 84px;
   }
 

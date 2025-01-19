@@ -1,5 +1,5 @@
-.reviews{
-  scroll-margin-top: 150px;
+.reviews {
+  scroll-margin-top: 60px;
 }
 
 .reviews-container {
@@ -94,6 +94,9 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .reviews {
+    scroll-margin-top: 160px;
+  }
   .reviews-container {
     background-image: url('/img/wave-left-pc.png'),
       url('/img/wave-right-pc.png');

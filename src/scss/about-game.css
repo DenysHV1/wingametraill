@@ -1,5 +1,5 @@
 .about-game {
-  scroll-margin-top: 105px;
+  scroll-margin-top: 10px;
   padding-top: 50px;
 }
 
@@ -53,9 +53,9 @@
   height: 158px;
 }
 
-
 @media screen and (min-width: 1200px) {
   .about-game {
+    scroll-margin-top: 105px;
     padding-top: 59px;
   }
 
