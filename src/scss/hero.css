@@ -30,7 +30,25 @@
   width: 45px;
   height: 100px;
   z-index: 1;
+  transition: transform 750ms cubic-bezier(0.215, 0.610, 0.355, 1);
 }
+
+.hero-capitan:hover,
+.hero-capitan:active {
+  transform: translateX(10px);
+}
+
+/* @keyframes capitan {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+} */
 
 .hero_title {
   font-family: Lilita One;
@@ -81,7 +99,20 @@
 .play-link:hover,
 .play-link:focus,
 .play-link:active{
-  transform: scale(1.02);
+  transform: scale(1.00);
+  animation: moveSideToSide 2s infinite ease-in-out;
+}
+
+@keyframes moveSideToSide {
+  0% {
+    transform: scale(1.00);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1.00);
+  }
 }
 
 .play-link_picture {
@@ -154,6 +185,12 @@
     left: 52px;
     width: 186px;
     height: 413px;
+    transition: transform 2000ms cubic-bezier(0.215, 0.610, 0.355, 1);
+  }
+
+  .hero-capitan:hover,
+  .hero-capitan:active{
+    transform: translateX(320px);
   }
 
   /* link */
