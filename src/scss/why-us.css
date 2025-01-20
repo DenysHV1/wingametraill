@@ -1,0 +1,121 @@
+.why-us {
+  padding-bottom: 75px;
+}
+.why-us-container {
+  position: relative;
+  border-radius: 25px;
+  width: 300px;
+  height: 721px;
+  background: linear-gradient(135deg, #a3c9ea 0%, #6bb3ef 38%, #193d5b 96%);
+}
+
+.why-us-title {
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #000;
+  padding-top: 30px;
+  padding-bottom: 49px;
+}
+.why-us-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.why-us-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 11px;
+}
+
+.why-us-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #135c98;
+  padding: 10px;
+  border-radius: 64px;
+  margin: 0 auto;
+
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 16px;
+  color: #96b3eb;
+}
+
+.why-us-img.second {
+  background-color: #96b3eb;
+  color: #135c98;
+}
+.why-us-text {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+.why-us-bolt {
+  font-weight: 700;
+}
+
+.why-us-boat-img {
+  position: absolute;
+  border-radius: 25px;
+
+  width: 109px;
+  height: 79px;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .why-us {
+    padding-bottom: 89px;
+  }
+
+  .why-us-container {
+    width: 1150px;
+    height: 1028px;
+  }
+
+  .why-us-title {
+    font-size: 40px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .why-us-list {
+    gap: 30px;
+  }
+
+  .why-us-item {
+    gap: 70px;
+    padding: 0 173px;
+  }
+
+  .why-us-img {
+    width: 128px;
+    height: 128px;
+    padding: 40px;
+
+    font-size: 40px;
+  }
+
+  .why-us-text {
+    font-size: 24px;
+  }
+  .why-us-bolt {
+    font-weight: 700;
+  }
+
+  .why-us-boat-img {
+    width: 345px;
+    height: 210px;
+  }
+}
