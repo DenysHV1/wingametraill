@@ -176,7 +176,7 @@
     transition: transform 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
-  .hero-capitan:hover,
+  .hero-capitan:hover, 
   .hero-capitan:active {
     transform: translateX(20px);
   }
