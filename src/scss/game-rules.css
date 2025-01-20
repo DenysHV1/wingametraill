@@ -83,23 +83,35 @@
   color: #000;
 }
 
-.game-rules-characters {
+.card-wrap {
   position: relative;
 }
 .game-rules-man {
   position: absolute;
-  top: -128px;
+  bottom: -98px;
   left: 0;
   width: 99px;
   height: 179px;
+  transition: transform 750ms cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.game-rules-man:hover,
+.game-rules-man:active{
+  transform: translateX(10px);
 }
 
 .game-rules-girl {
   position: absolute;
-  top: -131px;
-  left: 228px;
+  bottom: -99px;
+  left: 252px;
   width: 80px;
   height: 181px;
+  transition: transform 750ms cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.game-rules-girl:hover,
+.game-rules-girl:active{
+  transform: translateX(-10px);
 }
 
 @media screen and (min-width: 1200px) {
@@ -177,16 +189,38 @@
   }
 
   .game-rules-man {
-    top: -410px;
+    bottom: -110px;
     left: 5px;
     width: 254px;
     height: 505px;
+    transition: transform 750ms cubic-bezier(0.215, 0.610, 0.355, 1);
+  }
+
+  .game-rules-man:hover,
+  .game-rules-man:active{
+    transform: translateX(20px);
   }
 
   .game-rules-girl {
-    top: -402px;
+    bottom: -102px;
     left: 914px;
     width: 213px;
     height: 484px;
+    transition: transform 750ms cubic-bezier(0.215, 0.610, 0.355, 1);
+  }
+
+  .game-rules-girl:hover,
+  .game-rules-girl:active{
+    transform: translateX(-20px);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .game-rules-man {
+    left: -10px;
+  }
+
+  .game-rules-girl {
+    left: 228px;
   }
 }
