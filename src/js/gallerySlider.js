@@ -101,7 +101,6 @@ export const gallerySlider = () => {
     }
   }
 
-
   window.addEventListener('resize', checkWindowSize);
 
   checkWindowSize();

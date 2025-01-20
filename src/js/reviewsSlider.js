@@ -13,7 +13,6 @@ export const reviewsSlider = () => {
     dots.forEach((dot, i) => {
       dot.classList.toggle('active', i === n);
     });
-
   }
 
   function nextSlide() {

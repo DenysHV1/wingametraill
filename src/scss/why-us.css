@@ -33,9 +33,6 @@
   max-width: 278px;
 }
 
-
-
-
 .why-us-img {
   display: flex;
   align-items: center;
@@ -79,10 +76,10 @@
 }
 
 /* design moment */
-.why-us-text_fix{
+.why-us-text_fix {
   padding-right: 30px;
 }
-.why-us-text_fix2{
+.why-us-text_fix2 {
   max-width: 198px;
 }
 /* design moment */
