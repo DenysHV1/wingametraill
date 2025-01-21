@@ -5,7 +5,7 @@ export const header = () => {
   const menuItems = document.querySelectorAll('.mobile-menu-item-js');
 
   openMenuBtn.addEventListener('click', () => {
-    menu.classList.add('is-open');
+    menu.classList.toggle('is-open');
   });
 
   closeMenuBtn.addEventListener('click', () => {
@@ -15,6 +15,6 @@ export const header = () => {
   menuItems.forEach(item => {
     item.addEventListener('click', () => {
       menu.classList.remove('is-open');
-    }); 
+    });
   });
 };
