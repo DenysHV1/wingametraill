@@ -69,7 +69,6 @@
   margin-top: 10px;
 }
 
-/* link */
 .play-link {
   max-width: 138px;
   background-color: #f2f2f2;
@@ -82,24 +81,26 @@
   margin-top: 7px;
   cursor: pointer;
   transition: transform 350ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform-origin: center;
+  will-change: transform;
 }
 
 .play-link:hover,
 .play-link:focus,
 .play-link:active {
-  transform: scale(1);
+  transform: scale(1.0);
   animation: moveSideToSide 2s infinite ease-in-out;
 }
 
 @keyframes moveSideToSide {
   0% {
-    transform: scale(1);
+    transform: scale(1.00);
   }
   50% {
-    transform: scale(1.04);
+    transform: scale(1.06);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.00);
   }
 }
 
@@ -108,24 +109,22 @@
   height: 22px;
 }
 
-.play-link_text {
+.play-link_text,
+.play-link_title {
   font-family: Montserrat;
+  text-align: left;
+}
+
+.play-link_text {
   font-size: 10px;
   font-weight: 400;
   line-height: 12.19px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 
 .play-link_title {
-  font-family: Montserrat;
   font-size: 14px;
   font-weight: 600;
   line-height: 17.07px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   margin-top: 4px;
 }
 
@@ -176,7 +175,7 @@
     transition: transform 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
-  .hero-capitan:hover, 
+  .hero-capitan:hover,
   .hero-capitan:active {
     transform: translateX(20px);
   }
